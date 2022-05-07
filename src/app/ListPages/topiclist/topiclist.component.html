@@ -1,0 +1,70 @@
+
+<div class="content">
+    <app-sidebar></app-sidebar>
+    <!-- <app-sidebar></app-sidebar> -->
+    <div class="container-fluid px-4 pt-2 pb-2">
+        <div class="header" id="style">
+            <input class="form-control" id="search" type="text" placeholder="Search" aria-label="Search">
+            <div class="container-fluid">
+                <div class="col-sm-12 col-xl-12 ">
+                    <div class=" rounded">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Sort by Department</option>
+                            <option value="1">.Net</option>
+                            <option value="2">Java</option>
+                            <option value="3">BFS</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h2 class="pt-4 px-4"></h2>
+        </section>
+
+        <div class="container-fluid px-4 pt-2 pb-2">
+            <div class="row g-3 my-2">
+                <div class="col-8">
+                    <h5>Course Duration : {{data.name}}</h5>
+                </div>
+                <div class="right col-4">
+                    <h5>Trainer : </h5>
+                </div>
+            </div>
+            <div class="row g-3 my-2">
+                <div class="col-8">
+                    <h5>Course Description :</h5>
+                </div>
+                <div class="col-4">
+                    <a href="Trainer-TraineeList.html"><u class="text-dark">
+                            <h5>List of Trainee</h5>
+                        </u></a>
+                </div>
+            </div>
+            <div class="row g-3 my-2">
+                <div class="col-10" align="center">
+                    <h5>Course Content</h5>
+                </div>
+                <div class="container" *ngFor="let item of data">
+                    <div class="row g-3 my-2">
+                        <div class="col-md-12">
+                            <div
+                                class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                                <div class="col-1">
+                                    <a href="">
+                                        <p class="mb-0 text-dark">{{item.name}}</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <p class="col-1">
+                                    <p class="mb-0 text-dark">Duration :{{item.duration}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
