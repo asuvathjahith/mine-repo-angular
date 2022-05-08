@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Topic} from 'src/app/Models/topic';
+import { CourseDTO } from 'src/app/Models/CourseDTO';
+import { Topic } from 'src/app/Models/topic';
+
+
 
 import { TopiclistService } from 'src/app/service/topiclist.service';
-
 
 @Component({
   selector: 'app-topiclist',
@@ -10,15 +12,23 @@ import { TopiclistService } from 'src/app/service/topiclist.service';
   styleUrls: ['./topiclist.component.css']
 })
 export class TopiclistComponent implements OnInit {
-
-
-  constructor(private topicService:TopiclistService) { }
-   data: any
+  constructor(private topicService:TopiclistService ) { }
+  course:CourseDTO={
+    id: 20,
+    statusId: 1,
+    trainerId: 1,
+    departmentId: 1,
+    name: 'ASP.Net',
+    duration: '40 hours',
+    description: 'Framework',
+  }
+  public data: Topic[]=[]
   ngOnInit(): void {
     this.getAllTopics()
   }
+
   getAllTopics(){
-    this.topicService.getAllTopicByCourseId(5).
+    this.topicService.getAllTopicByCourseId(1).
       subscribe(res =>{
         console.log(res)
         this.data=res
