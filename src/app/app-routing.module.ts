@@ -48,14 +48,15 @@ import { UploadmomComponent } from './Pages/uploadmom/uploadmom.component';
 import { ViewheadprofileComponent } from './Pages/viewheadprofile/viewheadprofile.component';
 import { TopicviewComponent } from './Pages/topicview/topicview.component';
 import { CoDepartmentlistComponent } from './ListPages/co-departmentlist/co-departmentlist.component';
+import { CoursefeedbackComponent } from './Pages/coursefeedback/coursefeedback.component';
 import { TopiclistComponent } from './ListPages/topiclist/topiclist.component';
 
 
 const routes: Routes = [
   
   { path:'courses', component:CourselistComponent},
+  { path:'coursefeedback', component:CoursefeedbackComponent},
   { path:'topiclist', component:TopiclistComponent},
-  { path:'coursefeedback', component:TopiclistComponent},
 
   { path:'departments', component:HeadDepartmentlistComponent},
   // { path: 'sidebar', component: SidebarComponent },

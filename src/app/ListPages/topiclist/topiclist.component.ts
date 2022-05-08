@@ -13,7 +13,7 @@ export class TopiclistComponent implements OnInit {
 
 
   constructor(private topicService:TopiclistService) { }
-  public data: Topic[] = []
+   data: any
   ngOnInit(): void {
     this.getAllTopics()
   }

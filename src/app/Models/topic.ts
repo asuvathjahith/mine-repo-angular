@@ -1,8 +1,6 @@
-
+import { Course } from "./course";
 import { Assigment } from "./assignments";
 import { Attendance } from "./attendance";
-
-import { Course } from "./course";
 
 export interface Topic {
     id: number;
@@ -11,8 +9,8 @@ export interface Topic {
     duration: string;
     context: string;
     isDisabled: boolean;
-    course: Course | null;
-    attendances: Attendance[] | null;
-    assigments: Assigment[] | null;
+    course: Course;
+    attendances: Attendance[];
+    assigments: Assigment[];
 
 }

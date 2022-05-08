@@ -19,13 +19,13 @@
             </div>
         </div>
         <section>
-            <h2 class="pt-4 px-4"></h2>
+            <h2 class="pt-4 px-4">{{data.name}}</h2>
         </section>
 
         <div class="container-fluid px-4 pt-2 pb-2">
             <div class="row g-3 my-2">
                 <div class="col-8">
-                    <h5>Course Duration : {{data.name}}</h5>
+                        <h5>Course Duration : {{data.duration}}</h5>
                 </div>
                 <div class="right col-4">
                     <h5>Trainer : </h5>
@@ -41,6 +41,7 @@
                         </u></a>
                 </div>
             </div>
+            
             <div class="row g-3 my-2">
                 <div class="col-10" align="center">
                     <h5>Course Content</h5>
@@ -52,12 +53,12 @@
                                 class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
                                 <div class="col-1">
                                     <a href="">
-                                        <p class="mb-0 text-dark">{{item.name}}</p>
+                                        <p class="mb-0 text-dark">{{item.topics.name}}</p>
                                     </a>
                                 </div>
                                 <div>
                                     <p class="col-1">
-                                    <p class="mb-0 text-dark">Duration :{{item.duration}}</p>
+                                    <p class="mb-0 text-dark">Duration :{{item.topics.duration}}</p>
                                 </div>
                             </div>
                         </div>
